@@ -24,4 +24,4 @@ An all-in-one cryptography suite implemented in pure Rust.
 * Key Agreement Protocols (KAPs)
 * One-time Passwords (OTPs)
 
-**libRypt is not ready for production use.** [Please see our roadmap](https://www.github.com/librypt/librypt/ROADMAP.md) and [any open issues](https://www.github.com/librypt/librypt/issues) for a better idea of the status of the project.
+**libRypt is not ready for production use.** [Please see our roadmap](https://github.com/librypt/.github/blob/main/profile/README.md) and [any open issues](https://www.github.com/librypt/librypt/issues) for a better idea of the status of the project.
