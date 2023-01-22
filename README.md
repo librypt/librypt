@@ -4,10 +4,10 @@
 
 # libRypt
 
-[![License](https://img.shields.io/github/license/librypt/librypt)](https://www.github.com/librypt/librypt/LICENSE)
-[![Test Status](https://img.shields.io/github/actions/workflow/status/librypt/librypt/rust.yml)](https://www.github.com/librypt/librypt/actions)
-[![Issues](https://img.shields.io/github/issues/librypt/librypt)](https://www.github.com/librypt/librypt/issues)
-[![Language Use](https://img.shields.io/github/languages/top/librypt/librypt)](https://github.com/librypt/librypt/search?l=rust)
+[![license](https://img.shields.io/github/license/librypt/librypt)](https://www.github.com/librypt/librypt/LICENSE)
+[![test status](https://img.shields.io/github/actions/workflow/status/librypt/librypt/rust.yml)](https://www.github.com/librypt/librypt/actions)
+[![issues](https://img.shields.io/github/issues/librypt/librypt)](https://www.github.com/librypt/librypt/issues)
+[![dependency status](https://deps.rs/repo/github/librypt/librypt/status.svg)](https://deps.rs/repo/github/librypt/librypt)
 
 An all-in-one cryptography suite implemented in pure Rust.
 
