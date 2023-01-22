@@ -1,0 +1,44 @@
+[package]
+name = "librypt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+librypt-int = { version = "0.1", git = "https://www.github.com/librypt/librypt-int", optional = true }
+librypt-kdf = { version = "0.1", git = "https://www.github.com/librypt/librypt-kdf", optional = true }
+librypt-mac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac", optional = true }
+librypt-hash = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash", optional = true }
+librypt-entropy = { version = "0.1", git = "https://www.github.com/librypt/librypt-entropy", optional = true }
+librypt-hotp = { version = "0.1", git = "https://www.github.com/librypt/librypt-hotp", optional = true }
+librypt-totp = { version = "0.1", git = "https://www.github.com/librypt/librypt-totp", optional = true }
+
+librypt-mac-hmac = { version = "0.1", git = "https://www.github.com/librypt/librypt-mac-hmac", optional = true }
+
+librypt-kdf-hkdf = { version = "0.1", git = "https://www.github.com/librypt/librypt-kdf-hkdf", optional = true }
+
+librypt-hash-md5 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-md5", optional = true }
+librypt-hash-sha1 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-sha1", optional = true }
+librypt-hash-sha2 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-sha2", optional = true }
+librypt-hash-sha3 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-sha3", optional = true }
+librypt-hash-blake2 = { version = "0.1", git = "https://www.github.com/librypt/librypt-hash-blake2", optional = true }
+
+[features]
+default = ["int", "kdf", "mac", "hash", "entropy", "hotp", "totp", "hmac", "hkdf", "md5", "sha1", "sha2", "sha3", "blake2"]
+
+int = ["dep:librypt-int"]
+kdf = ["dep:librypt-kdf"]
+mac = ["dep:librypt-mac"]
+hash = ["dep:librypt-hash"]
+entropy = ["dep:librypt-entropy"]
+hotp = ["dep:librypt-hotp"]
+totp = ["dep:librypt-totp"]
+
+hmac = ["dep:librypt-mac-hmac", "mac"]
+
+hkdf = ["dep:librypt-kdf-hkdf", "kdf"]
+
+md5 = ["dep:librypt-hash-md5", "hash"]
+sha1 = ["dep:librypt-hash-sha1", "hash"]
+sha2 = ["dep:librypt-hash-sha2", "hash"]
+sha3 = ["dep:librypt-hash-sha3", "hash"]
+blake2 = ["dep:librypt-hash-blake2", "hash"]
