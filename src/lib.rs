@@ -1,5 +1,7 @@
 #[cfg(feature = "int")]
-pub use librypt_int as int;
+pub mod int {
+    pub use librypt_int::*;
+}
 
 #[cfg(feature = "kdf")]
 pub mod kdf {
@@ -14,7 +16,9 @@ pub mod mac {
     pub use librypt_mac::*;
 
     #[cfg(feature = "hmac")]
-    pub use librypt_mac_hmac as hmac;
+    pub mod hmac {
+        pub use librypt_mac_hmac::*;
+    }
 }
 
 #[cfg(feature = "hash")]
@@ -22,26 +26,42 @@ pub mod hash {
     pub use librypt_hash::*;
 
     #[cfg(feature = "md5")]
-    pub use librypt_hash_md5 as md5;
+    pub mod md5 {
+        pub use librypt_hash_md5::*;
+    }
 
     #[cfg(feature = "sha1")]
-    pub use librypt_hash_sha1 as sha1;
+    pub mod sha1 {
+        pub use librypt_hash_sha1::*;
+    }
 
     #[cfg(feature = "sha2")]
-    pub use librypt_hash_sha2 as sha2;
+    pub mod sha2 {
+        pub use librypt_hash_sha2::*;
+    }
 
     #[cfg(feature = "sha3")]
-    pub use librypt_hash_sha3 as sha3;
+    pub mod sha3 {
+        pub use librypt_hash_sha3::*;
+    }
 
     #[cfg(feature = "blake2")]
-    pub use librypt_hash_blake2 as blake2;
+    pub mod blake2 {
+        pub use librypt_hash_blake2::*;
+    }
 }
 
 #[cfg(feature = "entropy")]
-pub use librypt_entropy as entropy;
+pub mod entropy {
+    pub use librypt_entropy::*;
+}
 
 #[cfg(feature = "hotp")]
-pub use librypt_hotp as hotp;
+pub mod hotp {
+    pub use librypt_hotp::*;
+}
 
 #[cfg(feature = "totp")]
-pub use librypt_totp as totp;
+pub mod totp {
+    pub use librypt_totp::*;
+}
